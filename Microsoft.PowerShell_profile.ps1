@@ -10,9 +10,10 @@ Set-Alias ls Get-ChildItem-Format-Wide -option AllScope
 Set-Alias np notepad++.exe
 Set-Alias iv i_view32.exe
 Set-Alias pdf AcroRd32.exe
+Set-Alias aa Atom
 
 # Load posh-git example profile
-. 'C:\tools\poshgit\dahlbyk-posh-git-1941da2\profile.example.ps1'
+. 'C:\tools\posh-git\profile.example.ps1'
 
 function global:prompt {
   $cdelim = [ConsoleColor]::Green
