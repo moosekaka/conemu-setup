@@ -6,6 +6,7 @@ alias np="notepad++.exe"
 alias bfg="java -jar ~/bfg-1.12.8.jar"
 alias iv="i_view32.exe"
 alias pdf="AcroRd32.exe"
+alias aa="Atom"
 
 # Makes a more readable output.
 alias du='du -khs * | sort -h | less'
