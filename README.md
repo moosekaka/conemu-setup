@@ -29,7 +29,8 @@ Name of dropbox repo is `dotfilesgit`
 * cp `activate.bat` into `~\Anaconda2\Scripts` and `alias.cmd` into `~`
 
 ### 4. Powershell install:
-* Move `tools` folder to `C:\` to enable `poshgit`
+* Move `tools` folder to `C:\` to enable `poshgit`, or alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `C:\tools` folder.
+
 * Set up `$Profile`
 
     ```
@@ -42,11 +43,13 @@ Name of dropbox repo is `dotfilesgit`
 ### 5.  `.bashrc` install:
 
 * Install **git for windows**, choose **cmd with bash commands** option and **git credentials manager**
-* copy dotfiles `.bashc, .git-prompt etc` to `~`
+
+* Copy dotfiles `.bashc, .git-prompt etc` to `~`
 
 ### 6. Conemu install
+* If ConEmu is not installed, `choco install conemu`
 
-Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
+* Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
 
 ### 7. Add paths for notepad ++, iview, acroread32 etc.
-Also add putty and putty key, dont forget to set auto-login as root undet 'Connection->Data' and save session as "nas" to match Conemu startup tasks
+* Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks
