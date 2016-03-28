@@ -46,7 +46,7 @@ Name of dropbox repo is `dotfilesgit`
 
 ### 6. Conemu install
 
-Import xml, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
+Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
 
 ### 7. Add paths for notepad ++, iview, acroread32 etc.
 Also add putty and putty key, dont forget to set auto-login as root undet 'Connection->Data' and save session as "nas" to match Conemu startup tasks
