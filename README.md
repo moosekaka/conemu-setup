@@ -1,5 +1,13 @@
-## Install instructions
-### 1. Do not forget to add in `regedit HKCU AutoRun` with value `%USERPROFILE%\alias.cmd`
+## ConEmu optimized for Git-Win-SDK install instructions
+### 1. Install [Git-sdk-windows](https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.3)
+* Install into `\\%USERPROFILE%\\Git` to avoid problems with white space
+* Run pacman -Syuu in the git-bash shell
+* Install git credential manager folder or clone from [here](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases). *download just the zip file!*. Expand the zip to where the git /bin folder is and run `install.cmd` from elevated cmd.exe. Run `git config --global credential.helper manager` to activate GCM and test by `git config --list`, look for `credential.helper=manager`.
+* Run `pacman -Syuu man-db` and any other additional packages. Also run `mandb -cd` post install.
+* If reinstalling, dropbox-sdk-python (#2) needs to be reinstalled.
+* **Add path for Git , i.e.@ `git install folder/usr/bin` into Windows Path.**
+* Do not forget to add in `regedit HKCU AutoRun` with value `%USERPROFILE%\alias.cmd`
+
 
 ### 2. Set up dropbox remote for git
 Name of dropbox repo is `dotfilesgit`
@@ -10,46 +18,43 @@ Name of dropbox repo is `dotfilesgit`
 
 * `git clone https://github.com/anishathalye/git-remote-dropbox.git`
 
-    - move/cp `git-remote-dropbox` into `/usr/bin` in git folder
+    - move/cp `git-remote-dropbox` into `\\%USERPROFILE%\\bin` home folder.
 
-    - cp `bashrc\.git-remote-dropbox.json` into `~\`
+    - cp .git-remote-dropbox.json into ~ folder. (this you should have already or generate it at [dropbox developer site](https://www.dropbox.com/developers/apps).
 
 * cd to root folder of choice, `git clone "dropbox://dotfilesgit" `
 
-* cd to the `dotfilesgit` folder, `git checkout master` to make working dir visible
+* cd to the `dotfilesgit` folder, `git checkout master` to make working dir visible.
 
-### 3. `cmd` Setup:
+### 3. `cmd` setup:
 
-* Get **chocolatey** with:
+* Install [chocolatey](https://github.com/chocolatey/choco/wiki/Installation) with:
 
     ```
-    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "(iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))) >$null 2>&1" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
     ```
-* Then install Far Manager with `choco install far`
+
+* (Optional): Install Far Manager - `choco install far`
 * cp `activate.bat` into `~\Anaconda2\Scripts` and `alias.cmd` into `~`
 
-### 4. Powershell install:
-* Move `tools` folder to `C:\` to enable `poshgit`, or alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `C:\tools` folder.
+### 4. Powershell setup:
+* Copy `poshgit_ps` folder to `C:\` to enable [poshgit](http://dahlbyk.github.io/posh-git/), or alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `C:\poshgit_ps` folder.
+* Install [Powershell community extensions](https://chocolatey.org/packages/pscx) - `choco install pscx`.
 
 * Set up `$Profile`
-
     ```
     Set-ExecutionPolicy RemoteSigned
     New-Item -path $profile -type file -force
-
     ```
 * Move any other folders like `Modules etc.` into $Profile root folder (most likely in `~\Documents\WindowsPowerShell`)
 
-### 5.  `.bashrc` install:
-
-* Install **git for windows**, choose **cmd with bash commands** option and **git credentials manager**
-
-* Copy dotfiles `.bashc, .git-prompt etc` to `~`
+### 5. Setup `bash` customizations:
+* Copy files from `dotrc` folder to `~`, e.g. `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh).
 
 ### 6. Conemu install
-* If ConEmu is not installed, `choco install conemu`
+* If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html).
 
 * Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
 
-### 7. Add paths for notepad ++, iview, acroread32 etc.
-* Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks
+### 7. Add paths for notepad++, iview, acroread32 etc.
+* Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (echo $PATH or in Powershell $Env:path)
