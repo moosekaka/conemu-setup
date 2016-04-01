@@ -12,6 +12,7 @@
 	editor = C:/Notepad++/notepad++.exe
 	#editor = nano
 	excludesfile = C:/Users/sweel_rafelski/.gitignore_global
+	autocrlf = true
 [gc]
 	auto = 256
 [color]
@@ -19,6 +20,7 @@
 [push]
 	default = simple
 [gui]
-	recentrepo = C:/Users/sweel_rafelski/Documents/GitHub/sweepython
 [credential]
 	helper = manager
+[gui]
+	recentrepo = C:/Users/swee-i5-SSD/Documents/GitHub/conemu-setup

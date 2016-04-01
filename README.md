@@ -38,7 +38,7 @@ Name of dropbox repo is `dotfilesgit`
 * cp `activate.bat` into `~\Anaconda2\Scripts` and `alias.cmd` into `~`
 
 ### 4. Powershell setup:
-* Copy `poshgit_ps` folder to `C:\` to enable [poshgit](http://dahlbyk.github.io/posh-git/), or alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `C:\poshgit_ps` folder.
+* Copy `posh-git` folder to `%USERPROFILE%` to enable [poshgit](http://dahlbyk.github.io/posh-git/), or alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `%USERPROFILE%` folder. My Powershell $Profile by default has hardcoded location of posh-git as `$env:USERPROFILE\posh-git`.
 * Install [Powershell community extensions](https://chocolatey.org/packages/pscx) - `choco install pscx`.
 
 * Set up `$Profile`
