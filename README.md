@@ -1,7 +1,7 @@
 ## ConEmu optimized for Git-Win-SDK install instructions
 ### 1. Install [Git-sdk-windows](https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.3)
 * Install into `\\%USERPROFILE%\\Git` to avoid problems with white space
-* Run pacman -Syuu in the git-bash shell
+* Run `pacman -Syuu` in the git-bash shell
 * Install git credential manager folder or clone from [here](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases). *download just the zip file!*. Expand the zip to where the git /bin folder is and run `install.cmd` from elevated cmd.exe. Run `git config --global credential.helper manager` to activate GCM and test by `git config --list`, look for `credential.helper=manager`.
 * Run `pacman -Syuu man-db` and any other additional packages. Also run `mandb -cd` post install.
 * If reinstalling, dropbox-sdk-python (#2) needs to be reinstalled.
