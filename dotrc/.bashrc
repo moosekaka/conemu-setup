@@ -36,6 +36,12 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
+# Import inputrc
+if [ -f ~/.inputrc ]; then
+    . ~/.inputrc
+fi
+
+
 #prompt options
 
 MAGENTA="\e[0;35m"
