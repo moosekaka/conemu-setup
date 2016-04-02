@@ -1,6 +1,6 @@
-LESS=-fRMQW-5
+LESS=-ifRMQW-5
+LESSHISTFILE=-
 export LESS
-
 #autocd
 shopt -s autocd
 
@@ -36,17 +36,10 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-# Import inputrc
-if [ -f ~/.inputrc ]; then
-    . ~/.inputrc
-fi
-
-
 #prompt options
-
-MAGENTA="\e[0;35m"
-GREEN="\e[0;32m"
-RESET="\e[m"
+MAGENTA=$(tput setaf 5)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
 source ~/.git-prompt.sh
 PROMPT_COMMAND='__posh_git_ps1 "${MAGENTA}\D{%a, %b %d %R}: ${GREEN}\w${RESET}" "\n${GREEN}\$ ${RESET}"'
 
