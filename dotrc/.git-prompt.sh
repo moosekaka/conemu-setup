@@ -359,10 +359,9 @@ __posh_git_ps1 ()
     local branchstring="$isBare${b##refs/heads/}"
 
     # before-branch text
-	    gitstring="\[$BeforeBackgroundColor\]\[$BeforeForegroundColor\]$BeforeText"
+    gitstring="\[$BeforeBackgroundColor\]\[$BeforeForegroundColor\]$BeforeText"
 
     # branch
-
     if (( $behindBy > 0 && $aheadBy > 0 )); then
         gitstring+="\[$BranchBehindAndAheadBackgroundColor\]\[$BranchBehindAndAheadForegroundColor\]$branchstring $BranchBehindAndAheadStatusSymbol"
     elif (( $behindBy > 0 )); then
