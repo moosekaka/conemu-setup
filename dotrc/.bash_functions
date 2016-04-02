@@ -1,8 +1,5 @@
-function gh(){
-	cd ~/"Documents/GitHub/$@" && ls
-}
-
-
+# acd_function
+# written by Petar Marinov
 function cd_func ()
  {
    local x2 the_new_dir adir index
@@ -57,7 +54,15 @@ function cd_func ()
  
 alias cd=cd_func
 
+# shortcut to local github folder
+function gh()
+ {
+	cd ~/"Documents/GitHub/$@" && ls
+ }
+
 # cd and ls to folder macros
-function cs () {
+function cs ()
+ {
     cd "$@" && ls
-   }
+ }
+   
