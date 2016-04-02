@@ -1,6 +1,6 @@
 LESS=-ifRMQW-5
-LESSHISTFILE=-
 export LESS
+export LESSHISTFILE=/dev/null
 #autocd
 shopt -s autocd
 
