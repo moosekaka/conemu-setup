@@ -364,13 +364,13 @@ __posh_git_ps1 ()
     # branch
 
     if (( $behindBy > 0 && $aheadBy > 0 )); then
-        gitstring+="\[$BranchBehindAndAheadBackgroundColor\]\[$BranchBehindAndAheadForegroundColor\]$branchstring $BranchBehindAndAheadStatusSymbol"
+        gitstring+="\[$BranchBehindAndAheadBackgroundColor\]\[$BranchBehindAndAheadForegroundColor\]\[$branchstring $BranchBehindAndAheadStatusSymbol\]"
     elif (( $behindBy > 0 )); then
-        gitstring+="\[$BranchBehindBackgroundColor\]\[$BranchBehindForegroundColor\]$branchstring $BranchBehindStatusSymbol"
+        gitstring+="\[$BranchBehindBackgroundColor\]\[$BranchBehindForegroundColor\]\[$branchstring $BranchBehindStatusSymbol\]"
     elif (( $aheadBy > 0 )); then
-        gitstring+="\[$BranchAheadBackgroundColor\]\[$BranchAheadForegroundColor\]$branchstring $BranchAheadStatusSymbol"
+        gitstring+="\[$BranchAheadBackgroundColor\]\[$BranchAheadForegroundColor\]\[$branchstring $BranchAheadStatusSymbol\]"
     else
-        gitstring+="\[$BranchBackgroundColor\]\[$BranchForegroundColor\]$branchstring $BranchIdenticalStatusToSymbol"
+        gitstring+="\[$BranchBackgroundColor\]\[$BranchForegroundColor\]\[$branchstring $BranchIdenticalStatusToSymbol\]"
     fi
 
     local indexCount="$(( $indexAdded + $indexModified + $indexDeleted + $indexUnmerged ))"
