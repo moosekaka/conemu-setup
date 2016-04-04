@@ -168,7 +168,7 @@ EXEC 01;31  # Unix
 
 # Text {{{
 
-.txt 1;33
+.txt 37
 .org 1;33
 .md 1;33
 .mkd 1;33
@@ -364,7 +364,14 @@ EXEC 01;31  # Unix
 .log 32
 
 # Unimportant non-text files
+.blf 01;30
+.LOG1 01;30
+.LOG2 01;30
+.regtrans-ms 01;30
+.DAT 01;30
 *,v 01;30
+.db 01;30
+.ini 01;30
 .BAK 01;30
 .DIST 01;30
 .OFF 01;30

@@ -37,11 +37,14 @@ if [ -f ~/.bash_functions ]; then
 fi
 
 #prompt options
-MAGENTA=$(tput setaf 5)
-GREEN=$(tput setaf 2)
-RESET=$(tput sgr0)
-source ~/.git-prompt.sh
-PROMPT_COMMAND='__posh_git_ps1 "${MAGENTA}\D{%a, %b %d %R}: ${GREEN}\w${RESET}" "\n${GREEN}\$ ${RESET}"'
+YELLOW="\[\e[1;33m\]"
+MAGENTA="\[\e[0;35m\]"
+BLUE="\[\e[1;34m\]"
+GREEN="\[\e[0;32m\]"
+RESET="\[\e[0m\]"
+source ~/.git-prompt.sh # make sure this is copied from posh-git repo
+PSYMB=$'\xE2\x86\x92'  # right arrow
+export PROMPT_COMMAND='__posh_git_ps1 "${MAGENTA}\d ${YELLOW}\@: ${GREEN}\w${RESET}" "\n${BLUE}$PSYMB ${RESET}";'$PROMPT_COMMAND
 
 # History Options
 
