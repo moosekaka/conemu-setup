@@ -52,7 +52,7 @@ Name of dropbox repo is `dotfilesgit`
 
 
 ### 5. Setup `bash` customizations:
-* Copy files from `dotrc` folder to `~`, e.g. `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh).
+* Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder.
 * install/run symlinks for bash in `install`
 
 ### 6. Conemu install

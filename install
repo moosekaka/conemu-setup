@@ -1,0 +1,9 @@
+ln -s -v ~/dotfilesgit/.bashrc ~/.bashrc
+ln -s -v ~/dotfilesgit/.bash_aliases ~/.bash_aliases
+ln -s -v ~/dotfilesgit/.bash_functions ~/.bash_functions
+ln -s -v ~/dotfilesgit/.dir_colors ~/.dir_colors
+ln -s -v ~/dotfilesgit/.gitconfig ~/.gitconfig
+ln -s -v ~/dotfilesgit/.gitignore_global ~/.gitignore_global
+ln -s -v ~/dotfilesgit/.git-prompt.sh ~/.git-prompt.sh
+ln -s -v ~/dotfilesgit/.git-remote-dropbox.json ~/.git-remote-dropbox.json
+ln -s -v ~/dotfilesgit/.inputrc ~/.inputrc
