@@ -1,12 +1,15 @@
+# set additional paths for PSModulePath
 $modulesloc = [io.path]::combine($env:USERPROFILE, "dotfilesgit\powershell")
 $env:PSModulePath = $env:PSModulePath + ";$modulesloc"
 Import-Module PSColor
 Import-Module Pscx
+Import-Module PsGet
+
 # colorize version of ls
-# $ScriptPath = Split-Path -parent $PSCommandPath
 . "$modulesloc\Get-ChildItem-Color\Get-ChildItem-Color.ps1"
 Set-Alias l Get-ChildItem-Color -option AllScope
 Set-Alias ls Get-ChildItem-Format-Wide -option AllScope
+
 # common programs alias
 Set-Alias np notepad++.exe
 Set-Alias iv i_view32.exe
@@ -14,6 +17,7 @@ Set-Alias pdf AcroRd32.exe
 Set-Alias aa Atom
 Set-Alias -Name cd -value cddash -Option AllScope
 Set-Alias -Name hh -value cdhome -Option AllScope
+
 # Load posh-git example profile
 . $env:USERPROFILE\posh-git\profile.example.ps1
 function prompt {
@@ -30,17 +34,21 @@ function prompt {
 }
 Rename-Item Function:\Prompt PoshGitPrompt -Force
 function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}
-# ********************************************
+
 # DIRECTORY SHORCUT FUNCTIONS
-# ********************************************
+
 # Shortcut to home
 function cdhome {set-location $env:USERPROFILE}
+
+
 # Function for changing to Github dir and ls
 function gh{
 $githubloc = [io.path]::combine($env:USERPROFILE, "Documents\Github", $args)
 Set-Location $githubloc
 ls
 }
+
+
 # Function to emulate cd -
 function cddash {
 	if ($args[0] -eq '-')
@@ -50,6 +58,8 @@ function cddash {
 		pushd $args[0]
 	}
 }
+
+
 # Function for cd and ls
 function cs {
 if ($args[0])
@@ -60,9 +70,9 @@ if ($args[0])
 	    ls
 	}
 }
-# ********************************************
+
+
 # Git macros
-# ********************************************
 function Get-GitStatus { & git status -b $args }
 New-Alias -Name gs -Value Get-GitStatus -Force -Option AllScope
 function Get-GitCommit { & git commit -ev $args }
