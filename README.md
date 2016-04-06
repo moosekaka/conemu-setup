@@ -58,3 +58,7 @@ Name of dropbox repo is `dotfilesgit`
 
 ### 7. Add paths for notepad++, iview, acroread32 etc.
 * Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (echo $PATH or in Powershell $Env:path)
+* install/run symlinks for bash in `install`
+* link powershell `$PROFILE` to `dotfilesfit` folders
+
+    `new-symlink $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 $HOME\dotfilesgit\powershell\Microsoft.PowerShell_profile.ps1`
