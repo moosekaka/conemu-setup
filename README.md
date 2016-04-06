@@ -18,7 +18,7 @@ Name of dropbox repo is `dotfilesgit`
 
 * `git clone https://github.com/anishathalye/git-remote-dropbox.git`
 
-    - move/cp `git-remote-dropbox` into `\\%USERPROFILE%\\bin` home folder.
+    **- move/cp `git-remote-dropbox` into `\\%USERPROFILE%\\bin` home folder. _Also add this path to the system enviroment (Windows) path!_**.
 
     - cp .git-remote-dropbox.json into ~ folder. (this you should have already or generate it at [dropbox developer site](https://www.dropbox.com/developers/apps).
 
