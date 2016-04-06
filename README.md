@@ -53,7 +53,9 @@ Name of dropbox repo is `dotfilesgit`
 
 ### 5. Setup `bash` customizations:
 * Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder.
-* install/run symlinks for bash in `install`
+* If this is a first install, install symlinks for the dotfiles:
+
+    `. ~/dotfilesgit/install`
 
 ### 6. Conemu install
 * If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html).
@@ -61,4 +63,4 @@ Name of dropbox repo is `dotfilesgit`
 * Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
 
 ### 7. Add paths for notepad++, iview, acroread32 etc.
-* Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (echo $PATH or in Powershell $Env:path)
+* Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (in Powershell `$Env:path` or `Get-PathVariable` if PSCX is installed.)
