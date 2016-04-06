@@ -1,8 +1,10 @@
+$modulesloc = [io.path]::combine($env:USERPROFILE, "dotfilesgit\powershell")
+$env:PSModulePath = $env:PSModulePath + ";$modulesloc"
 Import-Module PSColor
 Import-Module Pscx
 # colorize version of ls
-$ScriptPath = Split-Path -parent $PSCommandPath
-. "$ScriptPath\Get-ChildItem-Color\Get-ChildItem-Color.ps1"
+# $ScriptPath = Split-Path -parent $PSCommandPath
+. "$modulesloc\Get-ChildItem-Color\Get-ChildItem-Color.ps1"
 Set-Alias l Get-ChildItem-Color -option AllScope
 Set-Alias ls Get-ChildItem-Format-Wide -option AllScope
 # common programs alias
@@ -23,7 +25,7 @@ function prompt {
   write-host '}' -n -f $GREEN
   Write-VcsStatus
   write-host " "
-  write-host "$([char]0x00BB)" -n -f $GREEN
+  write-host "$([char]0x03BE)" -n -f $GREEN
   return " "
 }
 Rename-Item Function:\Prompt PoshGitPrompt -Force
