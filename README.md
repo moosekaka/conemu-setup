@@ -46,10 +46,14 @@ Name of dropbox repo is `dotfilesgit`
     Set-ExecutionPolicy RemoteSigned
     New-Item -path $profile -type file -force
     ```
-* Move any other folders like `Modules etc.` into $Profile root folder (most likely in `~\Documents\WindowsPowerShell`)
+* link powershell `$PROFILE` to `dotfilesfit` folders
+
+    `new-symlink $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 $HOME\dotfilesgit\powershell\Microsoft.PowerShell_profile.ps1`
+
 
 ### 5. Setup `bash` customizations:
 * Copy files from `dotrc` folder to `~`, e.g. `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh).
+* install/run symlinks for bash in `install`
 
 ### 6. Conemu install
 * If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html).
@@ -58,7 +62,3 @@ Name of dropbox repo is `dotfilesgit`
 
 ### 7. Add paths for notepad++, iview, acroread32 etc.
 * Also add putty and putty key, dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (echo $PATH or in Powershell $Env:path)
-* install/run symlinks for bash in `install`
-* link powershell `$PROFILE` to `dotfilesfit` folders
-
-    `new-symlink $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 $HOME\dotfilesgit\powershell\Microsoft.PowerShell_profile.ps1`
