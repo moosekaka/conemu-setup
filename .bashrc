@@ -17,6 +17,10 @@ shopt -s autocd
 # for example, cd /vr/lgo/apaache would find /var/log/apache
  shopt -s cdspell
 
+ #includes filenames beginning with a ‘.’ in the results
+# of filename expansion.
+ shopt -s dotglob
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -37,14 +41,14 @@ if [ -f ~/.bash_functions ]; then
 fi
 
 #prompt options
-YELLOW="\[\e[0;33m\]"
+YELLOW="\[\e[1;33m\]"
 MAGENTA="\[\e[0;35m\]"
 BLUE="\[\e[1;34m\]"
 GREEN="\[\e[0;32m\]"
 RESET="\[\e[0m\]"
 source ~/.git-prompt.sh # make sure this is copied from posh-git repo
-PSYMB=$'\xE2\x99\x86'  # right arrow
-export PROMPT_COMMAND='__posh_git_ps1 "${MAGENTA}\d ${YELLOW}\@: ${GREEN}\w${RESET}" "\n${BLUE}$PSYMB ${RESET}";'$PROMPT_COMMAND
+PSYMB=$'\xCF\xA1'
+export PROMPT_COMMAND='echo;__posh_git_ps1 "${MAGENTA}\d ${YELLOW}\@: ${GREEN}\w${RESET}" "\n${BLUE}$PSYMB ${RESET}";'$PROMPT_COMMAND
 
 # History Options
 

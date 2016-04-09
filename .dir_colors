@@ -168,42 +168,42 @@ EXEC 01;31  # Unix
 
 # Text {{{
 
-.txt 37
-.org 1;33
-.md 1;33
-.mkd 1;33
+.txt 1;37
+.org 1;37
+.md 1;37
+.mkd 1;37
 
 # }}}
 # Source {{{
 
-.C 1;32
-.c 1;32
-.cc 1;32
-.csh 1;32
-.css 1;32
-.cxx 1;32
-.el 1;32
-.h 1;32
-.hs 1;32
-.htm 1;32
-.html 1;32
-.java 1;32
-.js 1;32
-.man 1;32
-.objc 1;32
-.php 1;32
-.pl 1;32
-.pm 1;32
-.pod 1;32
-.py 1;32
-.rb 1;32
-.rdf 1;32
-.sh 1;32
-.shtml 1;32
-.tex 1;32
-.vim 1;32
-.xml 1;32
-.zsh 1;32
+.C 33
+.c 33
+.cc 33
+.csh 33
+.css 33
+.cxx 33
+.el 33
+.h 33
+.hs 33
+.htm 33
+.html 33
+.java 33
+.js 33
+.man 33
+.objc 33
+.php 33
+.pl 33
+.pm 33
+.pod 33
+.py 33
+.rb 33
+.rdf 33
+.sh 33
+.shtml 33
+.tex 33
+.vim 33
+.xml 33
+.zsh 33
 
 # }}}
 # Image {{{
@@ -288,21 +288,21 @@ EXEC 01;31  # Unix
 # }}}
 # Documents {{{
 
-.doc 33
-.docx 33
-.rtf 33
-.dot 33
-.dotx 33
-.xls 33
-.xlsx 33
-.ppt 33
-.pptx 33
-.fla 33
-.psd 33
-.odt 33
-.ods 33
-.odp 33
-.pdf 33
+.doc 37
+.docx 37
+.rtf 37
+.dot 37
+.dotx 37
+.xls 37
+.xlsx 37
+.ppt 37
+.pptx 37
+.fla 37
+.psd 37
+.odt 37
+.ods 37
+.odp 37
+.pdf 37
 
 # }}}
 # Archives {{{
@@ -359,9 +359,9 @@ EXEC 01;31  # Unix
 # Custom {{{
 
 # Unimportant text files
-*# 32
-*~ 32
-.log 32
+*# 1;30
+*~ 1;30
+.log 1;30
 
 # Unimportant non-text files
 .blf 01;30
