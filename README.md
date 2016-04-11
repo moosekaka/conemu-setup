@@ -55,7 +55,7 @@ Name of dropbox repo is `dotfilesgit`
 * Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder.
 * If this is a first install, install symlinks for the dotfiles:
 
-    `. ~/dotfilesgit/install`
+    `. ~/dotfilesgit/install.bash`
 
 ### 6. Conemu install
 * If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html).
