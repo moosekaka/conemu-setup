@@ -16,7 +16,7 @@
 
 # Some shortcuts for different directory listings
  alias ls='ls -hCF --color=tty'                 # classify files in colour
- alias dir='ls --color=auto --format=vertical'
+ alias dir='ls -d --color=auto --format=vertical */'
  alias vdir='ls --color=auto --format=long'
  alias l='ls -CF'                              #
 

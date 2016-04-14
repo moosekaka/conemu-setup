@@ -10,19 +10,21 @@
 
 
 ### 2. Set up dropbox remote for git
-Name of dropbox repo is `dotfilesgit`
+For example, name of dropbox repo is `dotfilesgit`
 
-* `git clone https://github.com/dropbox/dropbox-sdk-python.git`
+* Install Dropbox API v2 for python
 
-    - install dropbox sdk python `python setup.py install`
+    `pip install dropbox`
 
-* `git clone https://github.com/anishathalye/git-remote-dropbox.git`
+* Install git dropbox helper
 
-    **- move/cp `git-remote-dropbox` into `\\%USERPROFILE%\\bin` home folder. _Also add this path to the system enviroment (Windows) path!_**.
+    `git clone https://github.com/anishathalye/git-remote-dropbox.git`
 
-    - cp .git-remote-dropbox.json into ~ folder. (this you should have already or generate it at [dropbox developer site](https://www.dropbox.com/developers/apps).
+* Move/cp `git-remote-dropbox` into `\\%USERPROFILE%\\bin` home folder. _Also add this path to the system enviroment (Windows) path!_
 
-* cd to root folder of choice, `git clone "dropbox://dotfilesgit" `
+* Create an Oauth2 token on [Dropbox API developer console](https://www.dropbox.com/developers/apps). and save as ".git-remote-dropbox.json"
+
+* cd to home, then `git clone "dropbox://dotfilesgit" `
 
 * cd to the `dotfilesgit` folder, `git checkout master` to make working dir visible.
 
