@@ -5,18 +5,11 @@ test -f ~/.bashrc && . ~/.bashrc
 export count=1;
 bash --version |
 while read line; do
-	 if [[ $count>1 ]]; then
-		 break
-	 else
-		 echo "$(tput setaf 2)$line"
-		 echo  "$(git --version)"
-		 echo  "Welcome $(tput setaf 5)$(id -u -n)"
-		 echo  "$(tput setaf 2)Logged in at: $(date)"
-		 ((count+=1));
-		 fi
+	[[ $count>1 ]] && break  # get just first line
+	echo "$(tput setaf 2)$line"
+	echo  "$(git --version)"
+	echo  "Welcome $(tput setaf 5)$(id -u -n)"
+	echo  "$(tput setaf 2)Logged in at: $(date)"
+	((count+=1));
 done
 unset count
-# bash --version|sed -n 1p
-# git --version
-# echo -e "$(tput setaf 2)Welcome $(id -u -n)"
-# echo  -e "$(tput setaf 2)Logged in at: $(date)"
