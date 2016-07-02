@@ -11,8 +11,10 @@
     - Run `git config --global credential.helper manager` to activate GCM
     - Test by `git config --list`, look for `credential.helper=manager`
 
-
-
+* Install [p4merge visual merge tool](https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools)
+    - Install only the visual merge tool
+    - Check that `C:\Program Files\Perforce` is in PATH
+    - [run `install.bash` script](#section5) and check that `extMerge` and `extDiff` is in `/usr/local/bin` after running script
 
 ### 2. Set up [dropbox remote](https://github.com/anishathalye/git-remote-dropbox) for git
 
@@ -65,7 +67,7 @@
 * Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder
 * If this is a first install, install symlinks for the dotfiles:
 
-    `. ~/dotfilesgit/install.bash`
+     <a name="section5">`. ~/dotfilesgit/install.bash`</a>
 
 
 ### 6. Conemu install
