@@ -31,14 +31,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 #dircolors
-if [ -f "$HOME/.dir_colors" ] ; then
-        eval $(dircolors -b $HOME/.dir_colors)
-fi
+[[ -f "$HOME/.dir_colors" ]] && eval $(dircolors -b $HOME/.dir_colors)
 
 # Import user functions
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
+[[ -f ~/.bash_functions ]] && . ~/.bash_functions
 
 #prompt options
 YELLOW="\[\e[1;33m\]"

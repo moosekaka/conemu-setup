@@ -5,7 +5,7 @@ test -f ~/.bashrc && . ~/.bashrc
 export count=1;
 bash --version |
 while read line; do
-	[[ $count>1 ]] && break  # get just first line
+	(( $count>1 )) && break  # get just first line
 	echo "$(tput setaf 2)$line"
 	echo  "$(git --version)"
 	echo  "Welcome $(tput setaf 5)$(id -u -n)"
