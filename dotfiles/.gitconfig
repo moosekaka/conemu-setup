@@ -23,4 +23,11 @@
 [credential]
 	helper = manager
 [gui]
-	recentrepo = C:/Users/swee-i5-SSD/Documents/GitHub/conemu-setup
+	fontdiff = -family Consolas -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = extMerge  "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	trustExitCode = false
+[diff]
+	external = extDiff
