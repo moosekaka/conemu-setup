@@ -1,15 +1,23 @@
 ## ConEmu optimized for Git-Win-SDK install instructions
 ### 1. Install [Git-sdk-windows](https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.3)
 * Install into `\\%USERPROFILE%\\Git` to avoid problems with white space
-    - Run `pacman -Syuu` in the git-bash shell
-    - Run `pacman -Syuu man-db` and any other additional packages. Also run `mandb -cd` post install
-    * **Add path for Git , e.g. @ `~/Git/usr/bin` into Windows Path.**
+    - Add `git-for-windows` repository into `/etc/pacman.conf`:
+    ```
+    [git-for-windows]
+    SigLevel = Optional TrustedOnly
+    Server = https://dl.bintray.com/git-for-windows/pacman/$arch
+    ```
+    - Run `pacboy update` in the git-bash shell
+    - Run `pacboy -sync man-db` and any other additional packages. Also run `mandb -cd` post install
+    * **Add path for git and git-core, e.g. `~/Git/usr/bin` and `~/Git/mingw64/libexec/git-core` into Windows Path**
 
 
-* Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) folder or clone from   [here](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases).  *download just the zip file!*
-    - Expand the zip file to where the `Git/bin folder` is and run `install.cmd` from elevated cmd.exe
+* Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) using 
+  pacboy
+    - `pacboy sync git-credential-manager:x`
     - Run `git config --global credential.helper manager` to activate GCM
-    - Test by `git config --list`, look for `credential.helper=manager`
+    - Test by `git config --list`, look for `credential.helper=manager` and in BASH, using `which`  
+
 
 * Install [p4merge visual merge tool](https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools)
     - Install only the visual merge tool
