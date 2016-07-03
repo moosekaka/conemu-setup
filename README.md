@@ -12,8 +12,7 @@
     * **Add path for git and git-core, e.g. `~/Git/usr/bin` and `~/Git/mingw64/libexec/git-core` into Windows Path**
 
 
-* Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) using 
-  pacboy
+* Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)
     - `pacboy sync git-credential-manager:x`
     - Run `git config --global credential.helper manager` to activate GCM
     - Test by `git config --list`, look for `credential.helper=manager` and in BASH, using `which`  
@@ -30,7 +29,7 @@
 
     `pip install git-remote-dropbox`
 
-* Create an Oauth2 token on [Dropbox API developer console](https://www.dropbox.com/developers/apps), and save as ".git-remote-dropbox.json"
+* Create an Oauth2 token on [Dropbox API developer console](https://www.dropbox.com/developers/apps), and save as ".git-remote-dropbox.json" in `dotfilesgit\dotfiles` folder where a symlink script will link it to home folder
     - connect to a repository, e.g. if dropbox repo is `dotfilesgit`
     - cd to home, then `git clone "dropbox://dotfilesgit" `
     - cd to the `dotfilesgit` folder, `git checkout master` to make working dir visible
@@ -73,7 +72,7 @@
 
 ### 5. Setup `bash` customizations:
 * Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder
-* If this is a first install, install symlinks for the dotfiles:
+* If this is a first install, run this script to create dotfiles symlinks and git p4merge wrapper tools
 
      <a name="section5">`. ~/dotfilesgit/install.bash`</a>
 
