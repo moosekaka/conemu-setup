@@ -1,3 +1,4 @@
+export LC_ALL="en_US.UTF-8"
 LESS=-ifRMQW-5
 export LESS
 export LESSHISTFILE=/dev/null
@@ -43,7 +44,7 @@ BLUE="\[\e[1;34m\]"
 GREEN="\[\e[0;32m\]"
 RESET="\[\e[0m\]"
 source ~/.git-prompt.sh # make sure this is copied from posh-git repo
-PSYMB=$'\xCF\xA1'
+PSYMB=$'\u2192'
 export PROMPT_COMMAND='echo;__posh_git_ps1 "${MAGENTA}\d ${YELLOW}\@: ${GREEN}\w${RESET}" "\n${BLUE}$PSYMB ${RESET}";'$PROMPT_COMMAND
 
 # History Options
