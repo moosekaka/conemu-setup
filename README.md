@@ -1,16 +1,10 @@
 ## ConEmu optimized for Git-Win-SDK install instructions
 ### 1. Install [Git-sdk-windows](https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.3)
 * Install into `\\%USERPROFILE%\\Git` to avoid problems with white space
-    - Add `git-for-windows` repository into `/etc/pacman.conf`:
-    ```
-    [git-for-windows]
-    SigLevel = Optional TrustedOnly
-    Server = https://dl.bintray.com/git-for-windows/pacman/$arch
-    ```
+   
     - Run `pacboy update` in the git-bash shell
-    - Run `pacboy -sync man-db` and any other additional packages. Also run `mandb -cd` post install
+    - Run `pacman -S man-db` and any other additional packages. Also run `mandb -cd` post install
     * **Add path for git and git-core, e.g. `~/Git/usr/bin` and `~/Git/mingw64/libexec/git-core` into Windows Path**
-
 
 * Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)
     - `pacboy sync git-credential-manager:x`
