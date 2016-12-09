@@ -11,12 +11,6 @@
     - Run `git config --global credential.helper manager` to activate GCM
     - Test by `git config --list`, look for `credential.helper=manager` and in BASH, using `which`  
 
-
-* Install [p4merge visual merge tool](https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools)
-    - Install only the visual merge tool
-    - Check that `C:\Program Files\Perforce` is in PATH
-    - [run `install.bash` script](#section5) and check that `extMerge` and `extDiff` is in `/usr/local/bin` after running script
-
 ### 2. Set up [dropbox remote](https://github.com/anishathalye/git-remote-dropbox) for git
 
 * Install git dropbox helper
@@ -29,7 +23,25 @@
     - cd to the `dotfilesgit` folder, `git checkout master` to make working dir visible
 
 
-### 3. Powershell setup:
+### 3. Setup `bash` customizations:
+* Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder
+* If this is a first install, run this script to create dotfiles symlinks and git p4merge wrapper tools
+
+     <a name="section5">`. ~/dotfilesgit/install.bash`</a>
+
+* Install [p4merge visual merge tool](https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools)
+    - Install only the visual merge tool
+    - Check that `C:\Program Files\Perforce` is in PATH
+    - [run `install.bash` script](#section5) and check that `extMerge` and `extDiff` is in `/usr/local/bin` after running script
+    
+    
+### 4. Conemu install
+* If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html)
+
+* Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
+
+
+### 5. Powershell setup:
 * Copy `posh-git` folder to `%USERPROFILE%` to enable [poshgit](http://dahlbyk.github.io/posh-git/)
     - alternatively `git clone https://github.com/dahlbyk/posh-git.git` into the `%USERPROFILE%` folder
     - my Powershell $Profile has hardcoded location for `posh-git` as `$env:USERPROFILE\posh-git`
@@ -55,7 +67,7 @@
  iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
  ```
 
-### 4. `cmd` setup:
+### 6. `cmd` setup:
 
 * cp `activate.bat` into `~\Anaconda2\Scripts` and `alias.cmd` into `~`
 
@@ -63,18 +75,6 @@
 
 * (Optional): Install Far Manager - `choco install far`
 
-
-### 5. Setup `bash` customizations:
-* Copy `dotfilesgit` folder to `~`, check that .files like `.bashrc, .dir_colors etc` and especially [.git-prompt.sh \(like poshgit but for bash\)](https://github.com/lyze/posh-git-sh) are in the rootfolder
-* If this is a first install, run this script to create dotfiles symlinks and git p4merge wrapper tools
-
-     <a name="section5">`. ~/dotfilesgit/install.bash`</a>
-
-
-### 6. Conemu install
-* If ConEmu is not installed, `choco install conemu` or [download the full packages](http://www.fosshub.com/ConEmu.html)
-
-* Import `conemu.xml`, check in Tasks for Startup and Anaconda that Anaconda/Miniconda option is correct
 
 ### 7. Add paths for notepad++, iview, acroread32 etc.
 * Also add putty and putty key (priv.ppk), dont forget to set auto-login as root under 'Connection->Data' and save session as "nas" to match Conemu startup tasks. Check that System Enviroment Variables (in Powershell `$Env:path` or `Get-PathVariable` if PSCX is installed)
