@@ -5,11 +5,8 @@
     - Run `pacboy update` in the git-bash shell
     - Run `pacman -S man-db` and any other additional packages. Also run `mandb -cd` post install
     * **Add path for git and git-core, e.g. `~/Git/usr/bin` and `~/Git/mingw64/libexec/git-core` into Windows Path**
-
-* Install [git credential manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows)
-    - `pacboy sync git-credential-manager:x`
     - Run `git config --global credential.helper manager` to activate GCM
-    - Test by `git config --list`, look for `credential.helper=manager` and in BASH, using `which`  
+	- Test by `git config --list`, look for `credential.helper=manager` 
 
 ### 2. Set up [dropbox remote](https://github.com/anishathalye/git-remote-dropbox) for git
 
