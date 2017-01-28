@@ -47,7 +47,7 @@
 
 :: if our prompt var does not contain reference to CONDA_DEFAULT_ENV, set prompt
 @IF "%CHANGE_PROMPT%" == "1" @IF "x%PROMPT:CONDA_DEFAULT_ENV=%" == "x%PROMPT%" (
-    SET "PROMPT= $E[38;2;10;215;25m[%CONDA_NEW_ENV%]$E[0m %PROMPT%"
+    SET "PROMPT=$E[38;2;10;215;25m[%CONDA_NEW_ENV%]$E[0m %PROMPT%"
 )
 
 @REM always store the full path to the environment, since CONDA_DEFAULT_ENV varies
