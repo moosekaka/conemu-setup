@@ -126,7 +126,7 @@ dependencies:
 - !!python/unicode
   'openssl=1.0.2j=vc9_0'
 - !!python/unicode
-  'pandas=0.18.1=np111py27_0'
+  'pandas=0.19.2=np111py27_1'
 - !!python/unicode
   'path.py=9.0.1=py27_0'
 - !!python/unicode
