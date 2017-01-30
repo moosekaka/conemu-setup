@@ -250,9 +250,7 @@ dependencies:
   - prompt-toolkit==1.0.9
   - pydotplus==2.0.2
   - pyinstaller==3.2.1
-  - ruamel-yaml-==VERSION
   - typing==3.5.3.0
   - urllib3==1.19.1
   - win-unicode-console==0.5
-prefix: C:\Users\sweel-i5-ssd\Anaconda2
 
