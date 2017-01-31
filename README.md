@@ -5,8 +5,8 @@
   - run `setup-git-sdk.bat` in the 7zip file in a cmd shell.
   - Run `pacman -S man-db` and any other additional packages. Also run `mandb -cd` post install
 * **Add path for git and git-core, e.g. `~/Git/usr/bin` and `~/Git/mingw64/libexec/git-core` into Windows Path**
-  - Run `git config --global credential.helper manager` to activate GCM
-  - Test by `git config --list`, look for `credential.helper=manager`
+  - Run `git config --global credential.helper wincred` to activate GCM
+  - Test by `git config --list`, look for `credential.helper=wincred`
 
 ## 2. Setup `bash` customizations
 * Copy `dotfilesgit` folder to `~`, check that dotfiles like `.bashrc` and especially
