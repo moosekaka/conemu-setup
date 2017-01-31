@@ -13,6 +13,24 @@ $if Bash
   # 'Magic Space'
   # Insert a space character then performs
   # a history expansion in the line
-  Space: magic-space
+  #Space: magic-space
 $endif
+
+# Ctrl-Left
+"\e[1;5C": forward-word
+
+# Ctrl-Right
+"\e[1;5D": backward-word
+
+# Ctrl-Del
+"\e[3;5~": kill-word
+
+# Ctrl-BS - kill word on the left
+"\x1F": "\C-w"
+
+# Ctrl-K - resets the terminal (commented, I prefer binding below)
+# "\C-k": "\C-e\C-uecho -e \"\\033c\\c\"\n"
+
+# Ctrl-K - clears the input line regardless of cursor pos
+"\C-k": "\C-e\C-u"
 
